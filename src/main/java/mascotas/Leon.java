@@ -9,8 +9,8 @@ public class Leon {
     Leon(String name, String sexo,double peso, double largo){
         this.name=name;
         this.sexo=sexo;
-        
-
+        this.peso=peso;
+        this.largo=largo;
     }
 
 }
