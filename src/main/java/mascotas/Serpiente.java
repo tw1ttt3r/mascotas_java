@@ -3,11 +3,11 @@ package mascotas;
 public class Serpiente {
 
     String nombre ="";
-    char genero ="";
+    char genero = ' ';
     int edad = 0;
     double peso =0.0;
 
-    Serpiente(string nombre, char genero, int edad, double peso){
+    Serpiente(String nombre, char genero, int edad, double peso){
 
         this.nombre =nombre;
         this.genero=genero;
