@@ -1,28 +1,23 @@
-/// Clase por Eduardo M
 package mascotas;
 
-public class Perro {
-    String color = "";
-    int edad = 0;
-    String raza = "";
-    char genero = ' ';
-    String nombre = "";
-    double peso = 0.0;
-    double lng = 0.0;
+// Clase refactorizada con herencia
+public class Perro extends Mascota {
+    private String color;
+    private int edad;
+    private String raza;
 
-    Perro(String nombre, String color, int edad, char genero, double peso, double lng) {
-        this.nombre = nombre;
+    public Perro(String nombre, String color, int edad, char genero, double peso, double largo, String raza) {
+        super(nombre, genero, peso, largo);
         this.color = color;
         this.edad = edad;
-        this.genero = genero;
-        this.peso = peso;
-        this.lng = lng;
+        this.raza = raza;
     }
-    System.out.println("nombre"+nombre);
-    System.out.println("color"+color);
-    System.out.println("edad"+edad);
-    System.out.println("genero"+genero);
-    System.out.println("peso"+peso);
-    System.out.println("plng"+peso);
 
+    @Override
+    public String sonido() { return "Guau"; }
+
+    @Override
+    public String comer() { return "Croquetas"; }
+
+    public String traerPelota() { return nombre + " trae la pelota."; }
 }

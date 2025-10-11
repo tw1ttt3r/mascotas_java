@@ -1,25 +1,18 @@
 package mascotas;
 
-public class Serpiente {
+public class Serpiente extends Mascota {
+    private int edad;
 
-    String nombre ="";
-    char genero = ' ';
-    int edad = 0;
-    double peso =0.0;
-
-    Serpiente(String nombre, char genero, int edad, double peso){
-
-        this.nombre =nombre;
-        this.genero=genero;
-        this.edad=edad;
-        this.peso=peso;
-
-    }
-    void nadar(){
-    }
-    void crecer(){
-    }
-    void reproducir(){
+    public Serpiente(String nombre, char genero, int edad, double peso, double largo) {
+        super(nombre, genero, peso, largo);
+        this.edad = edad;
     }
 
+    @Override
+    public String sonido() { return "Sss"; }
+
+    @Override
+    public String comer() { return "Roedores"; }
+
+    public String reptar() { return nombre + " repta silenciosamente."; }
 }

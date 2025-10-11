@@ -1,16 +1,15 @@
 package mascotas;
 
-public class Leon {
-    String name="";
-    String sexo="";
-    double peso=0.0;
-    double largo=0.0;
-
-    Leon(String name, String sexo,double peso, double largo){
-        this.name=name;
-        this.sexo=sexo;
-        this.peso=peso;
-        this.largo=largo;
+public class Leon extends Mascota {
+    public Leon(String nombre, char genero, double peso, double largo) {
+        super(nombre, genero, peso, largo);
     }
 
+    @Override
+    public String sonido() { return "¡Rooaar!"; }
+
+    @Override
+    public String comer() { return "Carne"; }
+
+    public String rugir() { return nombre + " ruge con fuerza."; }
 }

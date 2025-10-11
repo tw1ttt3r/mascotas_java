@@ -1,41 +1,18 @@
 package mascotas;
 
-public class Hamster {
-    String color = "";
-    int edad = 0;
-    String raza = "";
-    char genero = ' ';
-    String nombre = "";
-    double peso = 0.0;
-    double longitud = 0.0;
+public class Hamster extends Mascota {
+    private int edad;
 
-    public Hamster(String nombre, String raza, char genero, int edad, double peso, double longitud) {
-        this.nombre = nombre;
-        this.raza = raza;
-        this.genero = genero;
+    public Hamster(String nombre, char genero, int edad, double peso, double largo) {
+        super(nombre, genero, peso, largo);
         this.edad = edad;
-        this.peso = peso;
-        this.longitud = longitud;
     }
 
-    public void comer() {
-    }
+    @Override
+    public String sonido() { return "Squeak"; }
 
-    public void correr() {
-    }
+    @Override
+    public String comer() { return "Granos"; }
 
-    public void dormir() {
-    }
-
-    public void beber() {
-    }
-
-
-    public void mostrarInfo() {
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Genero: " + genero);
-        System.out.println("Edad: " + edad);
-        System.out.println("Peso: " + peso);
-        System.out.println("Longitud: " + longitud);
-    }
+    public String correrRueda() { return nombre + " corre en la rueda."; }
 }

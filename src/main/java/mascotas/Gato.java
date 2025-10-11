@@ -1,25 +1,22 @@
 package mascotas;
 
 public class Gato extends Mascota {
-    String color = "";
-    int edad = 0;
-    String especie = "";
+    private String color;
+    private int edad;
+    private String especie;
 
-    Gato(String nombre, String color, int edad, char genero, double peso, double lng) {
-        super(nombre, genero, peso, lng);
-        // new Mascota();
+    public Gato(String nombre, String color, int edad, char genero, double peso, double largo, String especie) {
+        super(nombre, genero, peso, largo);
         this.color = color;
         this.edad = edad;
+        this.especie = especie;
     }
 
-    void comer() {}
+    @Override
+    public String sonido() { return "Miau"; }
 
-    void pasear() {}
+    @Override
+    public String comer() { return "Pescado"; }
 
-    void atacar() {}
-
-    void dormir() {}
-
-    void maullar() {}
-
+    public String afilarGarras() { return nombre + " afila sus garras."; }
 }
